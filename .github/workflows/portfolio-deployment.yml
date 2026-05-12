@@ -1,9 +1,11 @@
 name: Portfolio
-
 on: 
    push:
     branches: [main]
 
+    permissions:
+      pages: write     
+      id-token: write 
 
 jobs:
   deploy:
@@ -12,5 +14,13 @@ jobs:
     steps:
       - name: Chekout Code
         uses: actions/checkout@v4
-        run:
+        
+      - name: Setup Github Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v4        
 
+      - name: Deploying to GitHub pages
+        uses: actions/deploy-pages @v4   
+ 
