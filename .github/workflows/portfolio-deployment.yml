@@ -1,0 +1,16 @@
+name: Portfolio
+
+on: 
+   push:
+    branches: [main]
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Chekout Code
+        uses: actions/checkout@v4
+        run:
+
