@@ -8,8 +8,8 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4
-
-      - name: deploy with docker compose
-        run: docker compose up -d --build
+        - name: checkout code
+          uses: actions/checkout@v4
+    
+        - name: deploy with docker compose
+          run: docker compose up -d --build
