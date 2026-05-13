@@ -9,7 +9,7 @@ jobs:
 
     steps:
        - name: checkout code
-         usage: actions/checkout@v4
+         uses: actions/checkout@v4
 
        - name: deploy with docker compose
          run: docker compose up -d --build
