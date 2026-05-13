@@ -3,9 +3,10 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    runs-on: self-hosted
     env:
-      DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
+        DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
+    runs-on: self-hosted
+
     steps:
       - name: checkout code
         uses: actions/checkout@v4
