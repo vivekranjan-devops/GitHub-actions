@@ -1,31 +1,31 @@
-name: Portfolio
-on: 
-   workflow_dispatch: 
-   # push:
-   #  branches: [main]
+# name: Portfolio
+# on: 
+#    workflow_dispatch: 
+#    # push:
+#    #  branches: [main]
 
-    permissions:
-      pages: write     
-      id-token: write 
+#     permissions:
+#       pages: write     
+#       id-token: write 
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.url }}
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     environment:
+#         name: github-pages
+#         url: ${{ steps.deployment.outputs.url }}
 
 
-    steps:
-      - name: Chekout Code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Chekout Code
+#         uses: actions/checkout@v4
         
-      - name: Setup Github Pages
-        uses: actions/configure-pages@v4
+#       - name: Setup Github Pages
+#         uses: actions/configure-pages@v4
         
-      - name: Upload static files
-        uses: actions/upload-pages-artifact@v4        
+#       - name: Upload static files
+#         uses: actions/upload-pages-artifact@v4        
 
-      - name: Deploying to GitHub pages
-        uses: actions/deploy-pages @v4   
+#       - name: Deploying to GitHub pages
+#         uses: actions/deploy-pages @v4   
  

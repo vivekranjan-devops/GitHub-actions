@@ -1,25 +1,25 @@
-name: Hello
-on:
-  # workflow_dispatch: 
-  push:
-      branches: [main]
-      paths:
-         - '**.html'
-jobs:
-  greet:
-    runs-on: ubuntu-latest
-    steps:
-      - name: say hello to user
-        run: echo "Hello Dosto"
+# name: Hello
+# on:
+#   # workflow_dispatch: 
+#   push:
+#       branches: [main]
+#       paths:
+#          - '**.html'
+# jobs:
+#   greet:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: say hello to user
+#         run: echo "Hello Dosto"
 
-      - name: say hello to username
-        run: echo "hellooww  $USER"
+#       - name: say hello to username
+#         run: echo "hellooww  $USER"
 
-  details:
-     runs-on: ubuntu-latest
-     steps:
-        - name: show what is the version of python, docker, etc.
-          run: docker --version && python --version
+#   details:
+#      runs-on: ubuntu-latest
+#      steps:
+#         - name: show what is the version of python, docker, etc.
+#           run: docker --version && python --version
 
        
   

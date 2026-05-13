@@ -1,39 +1,39 @@
-name: CICD
-on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: This is the environment values where this workflow runs
-        default: 'dev'
-        required: true
-        type: choice
-        options:
-          - dev
-          - staging
-          - prod
-jobs:
-  code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout code
-        run: echo "code clone form github"
-  build:
-    needs: [code]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Build container image
-        run: echo "Doceker container build"
-  test:
-    needs: [build] 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test the container
-        run: echo "testing the container"
-  deploy:
-    if: inputs.environment == 'dev'
-    needs: [test, build] 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploying the app
-        run: echo "Docker compose deployed the app"
+# name: CICD
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       environment:
+#         description: This is the environment values where this workflow runs
+#         default: 'dev'
+#         required: true
+#         type: choice
+#         options:
+#           - dev
+#           - staging
+#           - prod
+# jobs:
+#   code:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout code
+#         run: echo "code clone form github"
+#   build:
+#     needs: [code]
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Build container image
+#         run: echo "Doceker container build"
+#   test:
+#     needs: [build] 
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Test the container
+#         run: echo "testing the container"
+#   deploy:
+#     if: inputs.environment == 'dev'
+#     needs: [test, build] 
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Deploying the app
+#         run: echo "Docker compose deployed the app"
   
