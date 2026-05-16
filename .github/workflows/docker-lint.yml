@@ -1,2 +1,4 @@
 name: Docker Lint
 
+on:
+    workflow
