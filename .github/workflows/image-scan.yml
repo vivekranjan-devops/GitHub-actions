@@ -16,7 +16,7 @@ jobs:
                   password: ${{secrets.DOCKERHUB_TOKEN}}
 
             - name: Trivy Image Scan
-              uses: aquasecurity/trivy-actions@0.33.1
+              uses: aquasecurity/trivy-action@v0.36.0
               with:
                 severity: 'CRITICAL'
         
