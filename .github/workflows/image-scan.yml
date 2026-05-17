@@ -27,5 +27,4 @@ jobs:
                 image-ref: ${{vars.DOCKERHUB_USER}}/githun-actions-app:${{ github.sha }}
                 severity: 'CRITICAL'
                 exit-code: '1'
-                trivyignores: '${{ github.workspace }}/.trivyignore'
         
