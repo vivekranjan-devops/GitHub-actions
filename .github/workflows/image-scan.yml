@@ -20,4 +20,5 @@ jobs:
               with:
                 image-ref: ${{vars.DOCKERHUB_USER}}/githun-actions-app:${{ github.sha }}
                 severity: 'CRITICAL,HIGH'
+                exit-code: '1'
         
