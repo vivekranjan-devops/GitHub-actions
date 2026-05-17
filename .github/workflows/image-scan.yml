@@ -19,5 +19,5 @@ jobs:
               uses: aquasecurity/trivy-action@v0.36.0
               with:
                 image-ref: ${{vars.DOCKERHUB_USER}}/githun-actions-app:${{ github.sha }}
-                severity: 'CRITICAL'
+                severity: 'CRITICAL, HIGH'
         
